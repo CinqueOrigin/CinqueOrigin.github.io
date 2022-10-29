@@ -84,7 +84,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     animation: typing 2s steps(20, end), blink-caret .3s step-end infinite alternate;
-    margin: -30px 0 0 90px;
+    margin: -30px 0 0 70px;
     transition: all 0.3s;
 }
 
@@ -373,7 +373,7 @@ body {
     }
 
     .cmd {
-        width: 90%;
+        width:  %;
         margin: 0 auto;
     }
 
