@@ -20,8 +20,8 @@ body {
 
 .meBox {
     float: left;
-    width: 20rem;
-    height: 25rem;
+    width: 24rem;
+    height: 30rem;
     background-color: white;
     margin-top: 100px;
     margin-left: 10%;
@@ -61,7 +61,7 @@ body {
 }
 
 .meBox-title {
-    width: 19rem;
+    width: auto;
     margin: 0 auto;
 }
 
