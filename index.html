@@ -10,7 +10,31 @@
     <link rel="stylesheet" type="text/css" href="static/css/FiraCode.css">
     <link rel="stylesheet" type="text/css" href="static/css/nutssss.css">
     <link rel="shortcut icon" href="/static/img/icon.png">
-    
+    <style>
+        .slider {
+            width: 100%;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .description {
+            text-align: center;
+            color: #fff;
+            font-size: 1.2em;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -113,6 +137,32 @@
                 </div>
             </div>
         </div>
+                <!-- Photo slider section -->
+        <div class="slider">
+            <img src="static/img/photo1.jpg" alt="Photo description 1">
+            <div class="description">这是第一张照片的描述</div>
+        </div>
+
+        <script>
+            let currentIndex = 0;
+            const images = [
+                { src: "static/img/photo1.jpg", desc: "这是第一张照片的描述" },
+                { src: "static/img/photo2.jpg", desc: "这是第二张照片的描述" },
+                // Add more images as needed
+            ];
+
+            const sliderImage = document.querySelector('.slider img');
+            const sliderDescription = document.querySelector('.slider .description');
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % images.length;
+                sliderImage.src = images[currentIndex].src;
+                sliderDescription.textContent = images[currentIndex].desc;
+                setTimeout(nextSlide, 3000); // Change image every 3 seconds
+            }
+
+            nextSlide(); // Start the slideshow
+        </script>
     </div>
 
     <!-- 页脚 -->
