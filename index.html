@@ -1,41 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 
+
     <title>CinqueOrigin</title>
- 
+     
     <link rel="stylesheet" type="text/css" href="static/css/FiraCode.css">
     <link rel="stylesheet" type="text/css" href="static/css/nutssss.css">
     <link rel="shortcut icon" href="/static/img/icon.png">
     <style>
         .slider {
-            display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
-            padding: 20px 0;
-        }
-
-        .slider img {
-            max-width: 100%;
-            height: auto;
-            margin-right: 20px;
-            border: 5px solid white;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .slider p {
-            color: black;
-            text-align: center;
-            background-color: white;
-            position: absolute;
-            bottom: 0;
             width: 100%;
-            margin-top: -30px; /* Adjust based on your preference */
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
         }
-
+    
+        .slider img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease-in-out;
+        }
+    
         .description {
             text-align: center;
             color: #fff;
@@ -47,6 +37,7 @@
             padding: 10px 0;
         }
     </style>
+
 </head>
 
 <body>
@@ -118,7 +109,7 @@
             <div class="cmd cmd2">
                 <!-- 三个按钮 -->
                 <div class="click">
-                    <div class="red"></div
+                    <div class="red"></div>
                     <div class="yellow"></div>
                     <div class="green"></div>
                 </div>
@@ -144,51 +135,20 @@
                     <span style="color: rgb(39, 39, 39);">./papers.sh</span>
                     <ul class="ul">
                         <li><a href="https://arxiv.org/abs/2312.08931">N-Gram Unsupervised Compoundation and Feature Injection for Better Symbolic Music Understanding(AAAI2024)</a></li>
+    
                     </ul>
                 </div>
             </div>
         </div>
+    
     </div>
-
-    <!-- 新增的图片滚动相册 -->
-    <div id="photoGallery" class="slider">
-        <!-- 图片和描述将通过JavaScript动态生成 -->
-    </div>
-
+    
     <!-- 页脚 -->
     <div id="footer">
         <p>© 2016-2019 CinqueOrigin | Believe in becoming your ideal self.</p>
-        <p>© 2019-2023 CinqueOrigin | Meeting, parting, greed, anger, love, obsession. Busy passing through the world of mortals.</p>
+        <p>© 2019-2023 CinqueOrigin | Meeting,parting,greed,anger,love,obsession.Busy passing through the world of mortals.</p>
     </div>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const gallery = document.getElementById('photoGallery');
-
-        // 假设图片数组, 实际应通过服务器端代码动态获取
-        const images = [
-            { src: 'static/photos/photo1.jpg', name: 'photo1' },
-            { src: 'static/photos/photo2.jpg', name: 'photo2' },
-            { src: 'static/photos/photo3.jpg', name: 'photo3' },
-        ];
-
-        images.forEach(img => {
-            const container = document.createElement('div');
-            container.style.position = 'relative';
-            container.style.display = 'inline-block';
-
-            const image = document.createElement('img');
-            image.src = img.src;
-            container.appendChild(image);
-
-            const description = document.createElement('p');
-            description.textContent = img.name;
-            container.appendChild(description);
-
-            gallery.appendChild(container);
-        });
-    });
-    </script>
 </body>
 
 </html>
